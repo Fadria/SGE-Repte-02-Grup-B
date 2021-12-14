@@ -1,0 +1,46 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <!-- Definimos como es la vista explicita de la lista-->
+    <record model="ir.ui.view" id="llista_productes">
+      <field name="name">Llista de productes</field>
+      <field name="model">llista_productes.lista</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nom_producte"/>
+          <field name="data_caducitat"/>
+          <field name="detalls"/>
+          <field name="pes"/>
+          <field name="ubicacio_magatzem"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+    <!-- Acciones al abrir las vistas en los modelos 
+    https://www.odoo.com/documentation/14.0/developer/reference/addons/actions.html
+    -->
+
+    <record model="ir.actions.act_window" id="llista_productes_action_window">
+      <field name="name">Llistat de productes</field>
+      <field name="res_model">llista_productes.lista</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Top menu item -->
+
+    <menuitem name="Llistat de productes" id="llista_productes_menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Opcions Llista productes" id="llista_productes_menu_1" parent="llista_productes_menu_root"/>
+
+    <!-- actions -->
+
+    <menuitem name="Mostrar llista" id="llista_productes_menu_1_list" parent="llista_productes_menu_1"
+              action="llista_productes_action_window"/>
+
+  </data>
+</odoo>
