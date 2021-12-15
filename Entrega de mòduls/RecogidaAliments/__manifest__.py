@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Llista de voluntaris",
+    'name': "Recogida de aliments",
 
     'summary': """
-    Llista de voluntaris""",
+    Recogida de aliments""",
 
     'description': """
-    Senzilla llista de voluntaris utilitzades per a crear un nou mòdul amb un nou model de dades
+    Mòdul que conté tot el necesari per a realitzar una recollida d'aliments
     """,
 
     'author': "Ayudantes de Santa",
@@ -29,6 +29,7 @@
         #Este primero indica la politica de acceso del modulo
         'security/ir.model.access.csv',
         #Cargamos las vistas y las plantillas
-        'views/views.xml',
+        'views/viewProductes.xml',
+        'views/viewVoluntaris.xml',
     ]
 }

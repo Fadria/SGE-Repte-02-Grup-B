@@ -13,6 +13,7 @@
           <field name="detalls"/>
           <field name="pes"/>
           <field name="ubicacio_magatzem"/>
+          <field name="voluntari"/>
         </tree>
       </field>
     </record>
