@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id='productes_action' model='ir.actions.act_window'>
+        <field name="name">Llistado de productes</field>
+        <field name="res_model">productes</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Productes" id="productes" action="productes_action" parent="recollida_menu"/>
+
+    <!-- Vista en formato árbol -->
+    <record id="productes_tree" model="ir.ui.view">
+        <field name="name">Llista de productes</field>
+        <field name="model">productes</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nom_producte"/>
+                <field name="data_caducitat"/>
+                <field name="pes"/>
+                <field name="ubicacio_magatzem"/>
+                <field name="voluntari"/>
+                <field name="detalls"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

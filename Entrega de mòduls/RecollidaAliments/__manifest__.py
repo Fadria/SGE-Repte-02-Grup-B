@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Recogida de aliments",
+    'name': "Recollida d'aliments",
 
     'summary': """
-    Recogida de aliments""",
+    Recollida d'aliments""",
 
     'description': """
     Mòdul que conté tot el necesari per a realitzar una recollida d'aliments
@@ -29,7 +29,8 @@
         #Este primero indica la politica de acceso del modulo
         'security/ir.model.access.csv',
         #Cargamos las vistas y las plantillas
-        'views/viewProductes.xml',
-        'views/viewVoluntaris.xml',
+        'views/voluntaris.xml',
+        'views/productes.xml',
+        'views/entregues.xml',
     ]
 }

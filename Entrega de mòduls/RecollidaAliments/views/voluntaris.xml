@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id='voluntaris_action' model='ir.actions.act_window'>
+        <field name="name">Llistado de voluntaris</field>
+        <field name="res_model">voluntaris</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Recollida d'aliments" id="recollida_menu" />
+    <menuitem name="Voluntaris" id="voluntaris" action="voluntaris_action" parent="recollida_menu"/>
+
+    <!-- Vista en formato árbol -->
+    <record id="voluntaris_tree" model="ir.ui.view">
+        <field name="name">Llista de voluntaris</field>
+        <field name="model">voluntaris</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nom_complet"/>
+                <field name="edat"/>
+                <field name="telefon"/>
+                <field name="email"/>
+                <field name="direccio"/>
+                <field name="zona_recollida"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

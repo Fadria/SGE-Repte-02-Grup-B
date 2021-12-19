@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id='entregues_action' model='ir.actions.act_window'>
+        <field name="name">Llistado de entregues</field>
+        <field name="res_model">entregues</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Entregues" id="entregues" action="entregues_action" parent="recollida_menu"/>
+
+    <!-- Vista en formato árbol -->
+    <record id="entregues_tree" model="ir.ui.view">
+        <field name="name">Llista de entregues</field>
+        <field name="model">entregues</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="organitzacio"/>
+                <field name="dataHora"/>
+                <field name="productes" widget="many2many"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
