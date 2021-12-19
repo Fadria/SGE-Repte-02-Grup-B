@@ -24,4 +24,24 @@
             </tree>
         </field>
     </record>
+
+    <record id="productes_view_form" model="ir.ui.view">
+        <field name="name">Nou producte</field>
+        <field name="model">productes</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="nom_producte"/>
+                    <field name="data_caducitat"/>
+                    <field name="pes"/>
+                    <field name="ubicacio_magatzem"/>
+                    <field name="voluntari"/>
+                </group>
+
+                <group>
+                    <field name="detalls"/>
+                </group>
+            </form>
+        </field>
+    </record>
 </odoo>

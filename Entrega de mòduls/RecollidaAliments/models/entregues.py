@@ -20,4 +20,5 @@ class Entregues(models.Model):
     # Camps del producte
     organitzacio = fields.Char("Organització")
     dataHora = fields.Datetime("Data i hora")
+    pdf = fields.Binary("Fichero PDF")
     productes = fields.Many2many('productes')

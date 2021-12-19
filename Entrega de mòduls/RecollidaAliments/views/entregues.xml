@@ -17,6 +17,7 @@
             <tree>
                 <field name="organitzacio"/>
                 <field name="dataHora"/>
+                <field name="pdf"/>
                 <field name="productes" widget="many2many"/>
             </tree>
         </field>
