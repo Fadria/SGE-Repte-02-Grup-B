@@ -21,6 +21,7 @@
                 <field name="ubicacio_magatzem"/>
                 <field name="voluntari"/>
                 <field name="detalls"/>
+                <field name="estat"/>
             </tree>
         </field>
     </record>
