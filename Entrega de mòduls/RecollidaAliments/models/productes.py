@@ -24,13 +24,4 @@ class Productes(models.Model):
     pes = fields.Float("Pes")
     ubicacio_magatzem = fields.Char("Ubicació Magatzem")
     voluntari = fields.Many2one('voluntaris')
-    localitzacio = fields.Char("Localització", compute="_estat_aliment", store=True)
     entrega = fields.Many2one('entregues', 'Entrega')
-
-    @api.depends('entrega')
-    def _estat_aliment(self):
-        for record in self:
-            if not record.entrega:
-                record.localitzacio = 'emmagatzemat'
-            else:
-                record.localitzacio = 'entregat'
