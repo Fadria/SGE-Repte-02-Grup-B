@@ -2,19 +2,20 @@
 <odoo>
 
     <record id='productes_action' model='ir.actions.act_window'>
-        <field name="name">Llistado de productes</field>
-        <field name="res_model">productes</field>
-        <field name="view_mode">tree,form</field>
+        <field name="name">Llistat de productes</field> <!-- Nom de la ventana -->
+        <field name="res_model">productes</field> <!-- Indiquem el model en el que es basa la vista -->
+        <field name="view_mode">tree,form</field> <!-- Indiquem els diferents tipos de modes de visualització -->
     </record>
 
+    <!-- Afegim aquesta vista al menu principal -->
     <menuitem name="Productes" id="productes" action="productes_action" parent="recollida_menu"/>
 
-    <!-- Vista en formato árbol -->
+    <!-- Vista en format d'arbre -->
     <record id="productes_tree" model="ir.ui.view">
-        <field name="name">Llista de productes</field>
-        <field name="model">productes</field>
+        <field name="name">Llista de productes</field> <!-- Nom de la vista -->
+        <field name="model">productes</field> <!-- Model usat a la vista-->
         <field name="arch" type="xml">
-            <tree>
+            <tree> <!-- Indiquem els camps del model a mostrar -->
                 <field name="nom_producte"/>
                 <field name="data_caducitat"/>
                 <field name="pes"/>
@@ -25,12 +26,13 @@
         </field>
     </record>
 
-    <record id="productes_view_form" model="ir.ui.view">
-        <field name="name">Nou producte</field>
+    <!-- Vista utilitzada al formulari -->
+    <record id="productes_view_form" model="ir.ui.view"> <!-- Nom de la vista -->
+        <field name="name">Nou producte</field> <!-- Model usat a la vista-->
         <field name="model">productes</field>
         <field name="arch" type="xml">
-            <form>
-                <group>
+            <form> <!-- Indiquem els camps del model a mostrar -->
+                <group> <!-- Agrupem visualment aquests elements -->
                     <field name="nom_producte"/>
                     <field name="data_caducitat"/>
                     <field name="pes"/>
@@ -38,7 +40,7 @@
                     <field name="voluntari"/>
                 </group>
 
-                <group>
+                <group> <!-- Agrupem visualment aquest element -->
                     <field name="detalls"/>
                 </group>
             </form>

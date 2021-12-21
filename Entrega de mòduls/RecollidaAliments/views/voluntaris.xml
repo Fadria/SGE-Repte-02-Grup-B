@@ -2,20 +2,23 @@
 <odoo>
 
     <record id='voluntaris_action' model='ir.actions.act_window'>
-        <field name="name">Llistado de voluntaris</field>
-        <field name="res_model">voluntaris</field>
-        <field name="view_mode">tree,form</field>
+        <field name="name">Llistat de voluntaris</field> <!-- Nom de la ventana -->
+        <field name="res_model">voluntaris</field> <!-- Indiquem el model en el que es basa la vista -->
+        <field name="view_mode">tree,form</field> <!-- Indiquem els diferents tipos de modes de visualització -->
     </record>
 
+    <!-- Menú principal de l'aplicació, es el primer que verem a Odoo, quan pulsem al botó d'aplicacions -->
     <menuitem name="Recollida d'aliments" id="recollida_menu" />
+
+    <!-- Afegim aquesta vista al menu principal -->
     <menuitem name="Voluntaris" id="voluntaris" action="voluntaris_action" parent="recollida_menu"/>
 
-    <!-- Vista en formato árbol -->
+    <!-- Vista en format d'arbre -->
     <record id="voluntaris_tree" model="ir.ui.view">
-        <field name="name">Llista de voluntaris</field>
-        <field name="model">voluntaris</field>
+        <field name="name">Llistat de voluntaris</field> <!-- Nom de la vista -->
+        <field name="model">voluntaris</field> <!-- Model usat a la vista-->
         <field name="arch" type="xml">
-            <tree>
+            <tree> <!-- Indiquem els camps del model a mostrar -->
                 <field name="nom_complet"/>
                 <field name="edat"/>
                 <field name="telefon"/>

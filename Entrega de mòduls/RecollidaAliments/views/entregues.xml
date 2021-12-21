@@ -2,23 +2,24 @@
 <odoo>
 
     <record id='entregues_action' model='ir.actions.act_window'>
-        <field name="name">Llistado de entregues</field>
-        <field name="res_model">entregues</field>
-        <field name="view_mode">tree,form</field>
+        <field name="name">Llistat d'entregues</field> <!-- Nom de la ventana -->
+        <field name="res_model">entregues</field> <!-- Indiquem el model en el que es basa la vista -->
+        <field name="view_mode">tree,form</field> <!-- Indiquem els diferents tipos de modes de visualització -->
     </record>
 
+    <!-- Afegim aquesta vista al menu principal -->
     <menuitem name="Entregues" id="entregues" action="entregues_action" parent="recollida_menu"/>
 
-    <!-- Vista en formato árbol -->
+    <!-- Vista en format d'arbre -->
     <record id="entregues_tree" model="ir.ui.view">
-        <field name="name">Llista de entregues</field>
-        <field name="model">entregues</field>
+        <field name="name">Llista d'entregues</field> <!-- Nom de la vista -->
+        <field name="model">entregues</field> <!-- Model usat a la vista-->
         <field name="arch" type="xml">
-            <tree>
+            <tree> <!-- Indiquem els camps del model a mostrar -->
                 <field name="organitzacio"/>
                 <field name="dataHora"/>
                 <field name="pdf"/>
-                <field name="productes" widget="many2many"/>
+                <field name="productes" widget="many2many"/> <!-- Widget necesari per a visualitzar correctament els productes -->
             </tree>
         </field>
     </record>

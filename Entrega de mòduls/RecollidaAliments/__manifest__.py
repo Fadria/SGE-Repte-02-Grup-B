@@ -11,24 +11,25 @@
 
     'author': "Ayudantes de Santa",
     #'website': "https://apuntesfpinformatica.es",
-    #Indicamos que es una aplicación
+    
+    # Indiquem que el mòdul es una aplicació
     'application': True,
 
-    # En la siguiente URL se indica que categorias pueden usarse
+    # En la següent URL s'indica que categories es poden usar
     # https://github.com/odoo/odoo/blob/14.0/odoo/addons/base/data/ir_module_category_data.xml
-    # Vamos a utilizar la categoria Productivity
     'category': 'Productivity',
     'version': '0.1',
 
-    # Indicamos lista de modulos necesarios para que este funcione correctamente
-    # En este ejemplo solo depende del modulo "base"
+    # Indiquem llista de mòduls necesaris per a que aquest funcione correctament
+    # En aquest cas, sol depen del mòdulol "base"
     'depends': ['base'],
 
-    # Esto siempre se carga
+    # Aquest sempre es carga
     'data': [
-        #Este primero indica la politica de acceso del modulo
+        # Política d'accés al mòdul
         'security/ir.model.access.csv',
-        #Cargamos las vistas y las plantillas
+
+        # Carguem les vistes i les plantilles
         'views/voluntaris.xml',
         'views/productes.xml',
         'views/entregues.xml',
